@@ -5,6 +5,17 @@
 @extends('layouts.contentNavbarLayout')
 @section('title', 'Add New Profile')
 
+<head>
+<script src="{{ asset('assets/vendor/libs/jquery/jquery.js') }}"></script>
+<script src="{{ asset('assets/vendor/js/bootstrap.js') }}"></script>
+<link rel="stylesheet" href="{{ asset('assets/css/organization.css') }}">
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+<meta name="csrf-token" content="{{ csrf_token() }}">
+@if(session('success'))
+<meta name="success-message" content="{{ session('success') }}">
+@endif
+</head>
+
 @section('content')
 <div class="row">
   <div class="col-xl">
@@ -129,17 +140,4 @@
     </div>
   </div>
 </div>
-@if(session('success'))
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-    Swal.fire({
-        icon: 'success',
-        title: 'Success!',
-        text: '{{ session('success') }}',
-        confirmButtonColor: '#3085d6',
-        confirmButtonText: 'OK'
-    });
-</script>
-@endif
-
 @endsection

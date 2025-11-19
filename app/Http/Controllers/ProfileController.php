@@ -25,18 +25,18 @@ class ProfileController extends Controller
             'last_name'    => 'required|string|max:255',
             'middle_name'  => 'nullable|string|max:255',
             'suffix'       => 'nullable|string|max:50',
-
             'email'        => 'required|email|max:255',
             'contact_number'=> 'required|string|max:20',
-
             'address'      => 'required|string|max:255',
             'sex'          => 'required|string',
             'type'         => 'required|string',
         ]);
 
         // Store to database
-        UserProfile::create($validated);
+        $user_profile = UserProfile::create($validated);
 
-        return redirect()->route('profiles.index')->with('success', 'Profile created successfully!');
+        return redirect()->route('profiles.index')
+        ->with('success', 'Profile created successfully!')
+        ->with('highlight_id', $user_profile->profile_id);
     }
 }
