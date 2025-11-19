@@ -1,0 +1,136 @@
+* --- Textbox Styling --- */
+.form-control {
+  border: 0.5px solid #cccccc; /* default border color */
+  border-radius: 8px;        /* rounded corners */
+  padding: 10px 12px;        /* spacing inside the input */
+  transition: all 0.3s ease; /* smooth hover/focus effect */
+  font-size: 16px;
+}
+
+/* --- On Focus --- */
+.form-control:focus {
+  border-color: #1c15e5;   /* changes to red when clicked */
+  box-shadow: 0 0 10px rgba(5, 37, 177, 0.489); /* subtle glow */
+  outline: none;            /* removes default blue outline */
+}
+
+/* --- Layout Container --- */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* --- Main Card Wrapper --- */
+.login-card {
+  display: flex;
+  background-color: #080592;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px 5px rgba(0, 0, 0, 0.6); /* bigger & darker */
+  overflow: hidden;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* --- Left Section (Form Side) --- */
+.login-left {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+}
+
+.login-title {
+  text-align: center;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Login Box --- */
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* --- Login Button --- */
+
+/* --- Right Section (Image Side) --- */
+.login-right {
+  flex: 1;
+  background-color: #0c67c3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.login-box h4 {
+  color: #ed27cc; /* matches the main card color */
+  font-weight: 600;
+}
+
+/* --- Login Button --- */
+.login-btn {
+  background-color: #2ba806 !important;
+  border-color: #2ba806 !important;
+  color: #ffffff !important; /* white text */
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: none; /* ensures text stays as written */
+}
+
+.login-btn:hover {
+  background-color: #0d8b1e !important;
+  border-color: #0d8b1e !important;
+  color: #ffffff !important;
+}
+.login-image {
+  max-width: 90%;
+  height: auto;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+  .login-card {
+    flex-direction: column;
+    max-width: 95%;
+  }
+
+  .login-right {
+    padding: 20px;
+  }
+
+  .login-left {
+    padding: 30px;
+  }
+}
+
+
+/* --- Show Password Checkbox --- */
+.checkbox-form-check{
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between checkbox and label */
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 11px;
+  color: #333; /* text color */
+}
+
+.checkbox-form-check-input {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  accent-color: #0419ff; /* green color matching your login button */
+}
+
+.checkbox-form-check-label {
+  cursor: pointer;
+  font-weight: 500;
+}
